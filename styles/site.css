@@ -97,6 +97,11 @@ img {
   max-width: 1000px;
 }
 
+.small-image {
+  max-width: 500px;
+  max-height: 300px;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   nav ul {
@@ -117,4 +122,70 @@ img {
   border-radius: 6px;
   border: 1px solid #ccc; /* soft border */
   box-shadow: none; /* remove shadow for cleaner look */
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.image-row img {
+  flex: 1;
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-body {
+  background-color: #f5faff; /* soft blue */
+  padding: 40px 0;
+  min-height: 100vh;
+}
+
+.liststyle {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slack Airtable images */
+.image-rowtwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;         /* reduced from 32px */
+  margin: 24px 0;
+  flex-wrap: nowrap;
+}
+
+.image-rowtwo img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: none;
+  display: block;
+}
+
+
+/* Green and Red Background Paragraph */
+.paragreen {
+  background-color: rgb(234, 255, 232);
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(203, 215, 202, 0.1);
+}
+
+.parared {
+  background-color: rgb(255, 231, 231);
+  padding: 20px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(203, 215, 202, 0.1);
 }
