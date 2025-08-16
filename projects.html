@@ -2,24 +2,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="stylesheet" type="text/css" href="styles/site.css">
   <title> Intern Portfolio Paramount 2025</title>
 </head>
 
 <body> 
-
 <header>
-<h1> Paramount Intern 2025 Recap </h1>
-<nav>
-<ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="live.html">Live Events</a></li>
-  <li><a href="projects.html"> Projects </a></li>
-  <li><a href="summary.html">Summary</a></li>
-</ul>
-</nav>
-</header>
+    <div class="nav-container">
+      <img src="images/parawhite.png" class="logo">
+    <div class="nav-center">
+    <h1>Paramount Intern 2025 Recap</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="live.html">Live Events</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="summary.html">Skills Learned</a></li>
+      </ul>
+    </nav>
+    </div>
+    <img src="images/parawhite.png" class="logo">
+    </div>
+  </header>
 
 <div class="container">
 <h2> Projects - Day to Day</h2>
@@ -70,12 +74,13 @@ This has primed my mind to constantly ideate on solutions and optimizations in o
 
 
 
-<h2>AWS - Ambitious-MediaSentry-MediaProxy-Automation</h2>
+<h2>AWS Automation Project</h2>
 <p>
-Objective: Use AWS services to streamline the process of matching up bitrate drop timestamps in the program MediaSentry with the streams in MediaProxy. 
+<b>Objective:</b> Use AWS services to streamline the process of matching up bitrate drop timestamps in the program MediaSentry with the streams in MediaProxy. <br>  
+LINKS: <a href="files/MediaProxyBitrate-AmbitiousAutomation-ProjectProposal.pdf">Project Proposal</a>, <a href="files/AWS-Automation.pdf"> Diagram Documentation </a>, <a href=https://www.youtube.com/watch?v=v2_vrwxUtvcVideo> Video Demo </a> 
 </p>
 <p> 
-Origin Story (How this came about): This was a project I proposed and worked on completely by myself on the side. I noticed that our process of finding bitrate drops in content using the MediaSentry program, taking the timestamp where it occured, then finding
+<b>Origin Story (How this came about):</b> This was a project I proposed and worked on completely by myself on the side. I noticed that our process of finding bitrate drops in content using the MediaSentry program, taking the timestamp where it occured, then finding
 that in the MediaProxy program was cumbersome. Fueled by a day in the office where I spent 2 hours parsing through 20 channels going back and forth like this, lining up multiple drops to the video clip and logging it, I figured there had
 be a more optimal way to go about this. This is when the AWS - Ambitious-MediaSentry-MediaProxy-Automation project was born.
 </p>
@@ -91,29 +96,13 @@ Seeing the video streams helped to validate whether the bitrate drop was truly p
   a folder within S3 called "clips" <br>
   2. <u>Improvised Version</u> I did not have access to API's so I tried every workaround possible. I ended up with a version where 24 hour streams would have to be manually downloaded (see below). Those 24 hour downloads would be manually uploaded into the S3 bucket. Then I launched an EC2 instance, SSH'd into it and ran python scripts. 
   I wrote a watcherscript.py in python to track whenever there was a new 24 hour upload in the S3 bucket, to trigger the rest of the process. <br>
-  From there I had two additional FFmpeg scripts: bitrateanalyzer.py and videoclipper.py both of which were written in the Nano terminal based text editor within the EC2 instance. They were able to automatically run and generate a log and 10 second clip, and automatically upload into the appropriate S3 buckets. 
-
+  From there I had two additional FFmpeg scripts: bitrateanalyzer.py and videoclipper.py both of which were written in the Nano terminal based text editor within the EC2 instance. They were able to automatically run and generate a log and 10 second clip, and automatically upload into the appropriate S3 buckets. </p>
+  <img src="images/line1.jpg" alt="optimal line1" class="small-image"/>
+  <img src="images/line2.jpg" alt="optimized line2" class="small-image"/>
   <p>
   Reality: 
   I realized that 24 hour streams were not possible without API's either, additionally there was a VPN constraint because these programs could only be accessed from work laptops. This is still largely a work in progress but I proposed it to my manager as well as the Integrations team here and got exprience presenting new ideas to higher ups which was important. 
   The idea was well recieved and it is being stashed for future use, when the technology necessary becomes available.</p>
-<img src="images/airtabledemo.jpg" alt="airtable demo" class="small-image"/>
-
-</p>
-<p>
-This has primed my mind to constantly ideate on solutions and optimizations in operational environments, and has encouraged me to critically evaluate and question established workflows to strive for greater efficiency. 
-</p>
-
-
-
-
-
-
-
-
-
-
-
 </div>
 </body>
 
